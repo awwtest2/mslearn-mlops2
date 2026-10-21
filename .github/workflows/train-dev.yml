@@ -98,3 +98,11 @@ jobs:
               issue_number: prNumber,
               body,
             });
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - Machine    
+    paths:
+    - 'src/train-model-parameters.py'
+    - 'src/job.yml'
