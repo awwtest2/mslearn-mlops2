@@ -2,6 +2,13 @@ name: Train model in dev
 
 on:
   workflow_dispatch:
+    
+  pull_request:
+    branches:
+      - Main    
+    paths:
+    - 'src/train-model-parameters.py'
+    - 'src/job.yml'
 
 permissions:
   contents: read
@@ -98,11 +105,3 @@ jobs:
               issue_number: prNumber,
               body,
             });
-on:
-  workflow_dispatch:
-  pull_request:
-    branches:
-      - Main    
-    paths:
-    - 'src/train-model-parameters.py'
-    - 'src/job.yml'
