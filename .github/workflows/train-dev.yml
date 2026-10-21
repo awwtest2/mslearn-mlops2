@@ -102,7 +102,7 @@ on:
   workflow_dispatch:
   pull_request:
     branches:
-      - Machine    
+      - Main    
     paths:
     - 'src/train-model-parameters.py'
     - 'src/job.yml'
